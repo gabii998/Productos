@@ -5,14 +5,17 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class SQLQuery extends SQLiteOpenHelper{
+    private String nombre;
 
     public SQLQuery(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
+        nombre=name;
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table productos(prod_cod integer primary key,prod_nombre text,prod_precio real)");
+        db.execSQL("create table "+nombre+"(prod_cod integer primary key,prod_nombre text,prod_precio real)");
     }
 
     @Override

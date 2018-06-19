@@ -14,8 +14,11 @@ import com.example.gabrielascurra.productos.R;
 import java.util.ArrayList;
 
 public class ProductoAdapter extends BaseAdapter {
-    protected Activity activity;
-    protected ArrayList<Producto> productos;
+    /*En esta clase,se crea un adaptador para cada item de la lista,
+    * utilizando el layout item_lista.xml*/
+
+    private Activity activity;
+    private ArrayList<Producto> productos;
 
     public ProductoAdapter(Activity activity, ArrayList<Producto> productos) {
         this.activity = activity;
@@ -44,11 +47,12 @@ public class ProductoAdapter extends BaseAdapter {
             LayoutInflater inf = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             vista=inf.inflate(R.layout.item_lista,null);
         }
-        Producto prod=productos.get(position);
+        Producto prod=productos.get(position);//Se toma el indice del item seleccionado en la lista
+        //Se asignan los elementos del item_lista.xml
         TextView codigo=vista.findViewById(R.id.txtCodigo);
         TextView nombre=vista.findViewById(R.id.txtNombre);
         TextView precio=vista.findViewById(R.id.txtPrecio);
-
+        //Se le setea cada atributo del objeto recuperado
         codigo.setText("Codigo: "+String.valueOf(prod.getCodigoProducto()));
         nombre.setText("Nombre: "+prod.getNombre());
         precio.setText("Precio: $"+String.valueOf(prod.getPrecio()) );

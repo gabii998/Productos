@@ -4,15 +4,16 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
 import java.util.ArrayList;
 
 public class Servicio {
-    Context contexto;
+    /*Esta es la clase encargada de realizar todas las operaciones en la base de datos*/
+    private Context contexto;
 
     public Servicio(Context contexto) {
         this.contexto = contexto;
     }
-
     public long nuevoProducto(Producto producto) {
         SQLQuery query = new SQLQuery(contexto, "Productos", null, 1);
         SQLiteDatabase bd = query.getWritableDatabase();
@@ -57,6 +58,7 @@ public class Servicio {
                         cursor.getFloat(cursor.getColumnIndex("prod_precio"))));
             } while (cursor.moveToNext());
         }
+        cursor.close();
         bd.close();
         return productos;
     }

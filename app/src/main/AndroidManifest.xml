@@ -17,7 +17,7 @@
             android:label="@string/titulo_modificar">
 
         </activity>
-        <activity android:name=".Controlador.Mostrar">
+        <activity android:name=".Controlador.Main">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 

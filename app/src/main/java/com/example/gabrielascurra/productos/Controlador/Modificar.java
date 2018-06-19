@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.gabrielascurra.productos.Modelo.Producto;
-import com.example.gabrielascurra.productos.Modelo.Servicio;
+import com.example.gabrielascurra.productos.Datos.ProductoDAO;
 import com.example.gabrielascurra.productos.R;
 
 public class Modificar extends AppCompatActivity {
@@ -32,10 +32,10 @@ public class Modificar extends AppCompatActivity {
         View.OnClickListener buttonListener= new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Servicio servicio= new Servicio(getApplicationContext());
+                ProductoDAO productoDAO = new ProductoDAO(getApplicationContext());
                 switch (v.getId()){
                     case R.id.btnModEliminar:
-                        int eliminar=servicio.eliminarProducto(String.valueOf(codigo));
+                        int eliminar= productoDAO.eliminarProducto(String.valueOf(codigo));
                         if(eliminar != -1){
                             Toast.makeText(Modificar.this, "Producto eliminado exitosamente", Toast.LENGTH_SHORT).show();
                             onBackPressed();
@@ -51,7 +51,7 @@ public class Modificar extends AppCompatActivity {
                             prec=Float.parseFloat(etPrecio.getText().toString());
                         }
 
-                        int modificar=servicio.modificarProducto(new Producto(cod,nomb,prec));
+                        int modificar= productoDAO.modificarProducto(new Producto(cod,nomb,prec));
                         if (modificar != -1){
                             Toast.makeText(Modificar.this, "Producto modificado exitosamente", Toast.LENGTH_SHORT).show();
                             onBackPressed();

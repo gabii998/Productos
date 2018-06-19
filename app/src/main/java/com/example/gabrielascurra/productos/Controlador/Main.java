@@ -11,18 +11,18 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.gabrielascurra.productos.Modelo.Producto;
-import com.example.gabrielascurra.productos.Modelo.Servicio;
+import com.example.gabrielascurra.productos.Datos.ProductoDAO;
 import com.example.gabrielascurra.productos.R;
 
 import java.util.ArrayList;
 
-public class Mostrar extends AppCompatActivity {
+public class Main extends AppCompatActivity {
     private ListView lista;
     private TextView listaVacia;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mostrar);
+        setContentView(R.layout.activity_main);
         //Se asignan los elementos de la vista
         listaVacia=findViewById(R.id.listaVacia);
         listaVacia.setVisibility(View.INVISIBLE);
@@ -34,8 +34,8 @@ public class Mostrar extends AppCompatActivity {
         /*La razon por la cual no se incluyo este codigo en el metodo onCreate,fue para
          * poderlo llamar cuando se actualizen los datos (en metodo onResume, que es cuando
          * la activity  vuelve a la vista del usuario) */
-        Servicio servicio=new Servicio(this);
-        ArrayList<Producto> productos=servicio.MostrarProductos();
+        ProductoDAO productoDAO =new ProductoDAO(this);
+        ArrayList<Producto> productos= productoDAO.MostrarProductos();
 
         if (! productos.isEmpty()){
             textView.setVisibility(View.INVISIBLE);//Si hay producto en la bd,hace que el textView que indica lo contrario,no se muestre

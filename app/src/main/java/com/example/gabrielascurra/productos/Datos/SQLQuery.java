@@ -1,4 +1,4 @@
-package com.example.gabrielascurra.productos.Modelo;
+package com.example.gabrielascurra.productos.Datos;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -14,7 +14,6 @@ public class SQLQuery extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table productos(prod_cod integer primary key,prod_nombre text,prod_precio real)");
         db.execSQL("create table "+nombre+"(prod_cod integer primary key,prod_nombre text,prod_precio real)");
     }
 

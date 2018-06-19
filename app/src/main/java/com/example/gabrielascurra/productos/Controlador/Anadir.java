@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.gabrielascurra.productos.Modelo.Producto;
-import com.example.gabrielascurra.productos.Modelo.Servicio;
+import com.example.gabrielascurra.productos.Datos.ProductoDAO;
 import com.example.gabrielascurra.productos.R;
 
 public class Anadir extends AppCompatActivity {
@@ -17,7 +17,7 @@ public class Anadir extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anadir);
-        final Servicio servicio=new Servicio(this);//Creo un objeto de tipo servicio
+        final ProductoDAO productoDAO =new ProductoDAO(this);//Creo un objeto de tipo productoDAO
         //Se asignan los elementos de la vista
         final EditText editTextCodigo= findViewById(R.id.etNuevoCodigo);
         final EditText editTextNombre=findViewById(R.id.etNuevoNombre);
@@ -37,7 +37,7 @@ public class Anadir extends AppCompatActivity {
                     precio=Float.parseFloat(editTextPrecio.getText().toString());//Caso contrario,toma el valor del campo y lo parsea
                 }
                 //Es un long porque es el tipo de valor que retorna la operación,se utiliza para verificar que la operación haya sido exitosa
-                long operacion=servicio.nuevoProducto(new Producto(codigo,nombre,precio));
+                long operacion= productoDAO.nuevoProducto(new Producto(codigo,nombre,precio));
                 if (operacion!=-1){//Si no hay error
                     Toast.makeText(Anadir.this, "Producto añadido exitosamente", Toast.LENGTH_SHORT).show();//Lanza un mensaje por pantalla
                    onBackPressed();//Y vuelve a la pantalla principal

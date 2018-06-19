@@ -8,26 +8,23 @@
         android:id="@+id/txtNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dip"
-        android:layout_marginTop="15dip"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/margen_items_listview"
+        android:layout_marginTop="@dimen/margen_items_listview"
         android:textColor="@android:color/black"
-        android:textSize="20dip" />
+        android:textSize="@dimen/tamano_item_primario_listview" />
 
     <TextView
         android:id="@+id/txtCodigo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dip"
-        android:text="TextView"
-        android:textSize="15dip" />
+        android:layout_marginStart="@dimen/margen_items_listview"
+        android:textSize="@dimen/tamano_item_secundario_listview" />
 
     <TextView
         android:id="@+id/txtPrecio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dip"
-        android:layout_marginStart="15dip"
-        android:text="TextView"
-        android:textSize="15dip" />
+        android:layout_marginBottom="@dimen/margen_items_listview"
+        android:layout_marginStart="@dimen/margen_items_listview"
+        android:textSize="@dimen/tamano_item_secundario_listview" />
 </LinearLayout>

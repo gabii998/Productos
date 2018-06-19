@@ -1,3 +1,5 @@
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margen_items_listview">15dip</dimen>
+    <dimen name="tamano_item_secundario_listview">15dip</dimen>
+    <dimen name="tamano_item_primario_listview">20dip</dimen>
 </resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Productos</string>
+    <string name="btn_Eliminar">Eliminar</string>
+    <string name="btn_Modificar">Guardar</string>
+    <string name="btn_Anadir">Añadir</string>
+    <string name="editText_id">Código del producto</string>
+    <string name="editText_nombre">Nombre</string>
+    <string name="editText_precio">Precio</string>
+    <string name="titulo_modificar">Modificar producto</string>
+    <string name="titulo_cargar">Cargar producto</string>
+</resources>

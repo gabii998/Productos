@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <android.support.design.widget.TextInputLayout
@@ -18,9 +18,7 @@
             android:layout_marginEnd="20dip"
             android:layout_marginStart="20dip"
             android:layout_marginTop="60dip"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            >
 
 
             <EditText
@@ -30,13 +28,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_weight="1"
-                android:editable="false"
                 android:ems="10"
                 android:hint="@string/editText_id"
                 android:inputType="number"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                 />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -46,9 +41,7 @@
             android:layout_marginEnd="20dip"
             android:layout_marginStart="20dip"
             android:layout_marginTop="34dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputLayout">
+            >
 
             <EditText
                 android:id="@+id/etModNombre"
@@ -59,8 +52,7 @@
                 android:ems="10"
                 android:hint="@string/editText_nombre"
                 android:inputType="textPersonName"
-                app:layout_constraintStart_toStartOf="@+id/inputLayout"
-                app:layout_constraintTop_toBottomOf="@+id/inputLayout" />
+                 />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -72,11 +64,7 @@
             android:layout_marginEnd="20dip"
             android:layout_marginStart="20dip"
             android:layout_marginTop="34dp"
-            android:layout_weight="1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputLayout2"
-            app:errorEnabled="true">
+            android:layout_weight="1">
 
             <EditText
                 android:id="@+id/etModPrecio"
@@ -87,8 +75,7 @@
                 android:ems="10"
                 android:hint="@string/editText_precio"
                 android:inputType="number|numberDecimal"
-                app:layout_constraintStart_toStartOf="@+id/inputLayout"
-                app:layout_constraintTop_toBottomOf="@+id/inputLayout" />
+                 />
         </android.support.design.widget.TextInputLayout>
 
         <LinearLayout
@@ -101,7 +88,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/btn_Eliminar" />
+                android:text="@string/btn_Eliminar"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@android:color/white"/>
 
             <Button
                 android:id="@+id/btnModGuardar"
@@ -111,10 +100,8 @@
                 android:layout_marginTop="60dp"
                 android:layout_weight="1"
                 android:text="@string/btn_Modificar"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/scrollView4" />
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@android:color/white" />
         </LinearLayout>
 
     </LinearLayout>

@@ -8,4 +8,5 @@
     <string name="editText_precio">Precio</string>
     <string name="titulo_modificar">Modificar producto</string>
     <string name="titulo_cargar">Cargar producto</string>
+    <string name="mensaje_vacio">No hay productos cargados,por favor añada alguno</string>
 </resources>

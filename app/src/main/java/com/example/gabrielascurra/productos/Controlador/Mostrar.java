@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.gabrielascurra.productos.Modelo.Producto;
@@ -19,16 +20,24 @@ import java.util.ArrayList;
 
 public class Mostrar extends AppCompatActivity {
     ListView lista;
+    TextView listaVacia;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar);
+        listaVacia=findViewById(R.id.listaVacia);
+        listaVacia.setVisibility(View.INVISIBLE);
         lista=findViewById(R.id.lvProductos);
-        poblarLista(lista);
+        poblarLista(lista,listaVacia);
     }
-    public void poblarLista(ListView lista ){
+    public void poblarLista(ListView lista, TextView textView){
         Servicio servicio=new Servicio(this);
         ArrayList<Producto> productos=servicio.MostrarProductos();
+        if (! productos.isEmpty()){
+            textView.setVisibility(View.INVISIBLE);
+        }else{
+            textView.setVisibility(View.VISIBLE);
+        }
         final ProductoAdapter adaptador=new ProductoAdapter(this,productos);
         lista.setAdapter(adaptador);
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -47,7 +56,7 @@ public class Mostrar extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        poblarLista(lista);
+        poblarLista(lista,listaVacia);
         super.onResume();
     }
 

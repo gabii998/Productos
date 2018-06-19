@@ -22,9 +22,7 @@
                 android:layout_marginEnd="20dip"
                 android:layout_marginStart="20dip"
                 android:layout_marginTop="60dip"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                >
 
 
                 <EditText
@@ -37,9 +35,7 @@
                     android:ems="10"
                     android:hint="@string/editText_id"
                     android:inputType="number"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -49,9 +45,7 @@
                 android:layout_marginEnd="20dip"
                 android:layout_marginStart="20dip"
                 android:layout_marginTop="34dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputLayout">
+                >
 
                 <EditText
                     android:id="@+id/etNuevoNombre"
@@ -62,8 +56,7 @@
                     android:ems="10"
                     android:hint="@string/editText_nombre"
                     android:inputType="textPersonName"
-                    app:layout_constraintStart_toStartOf="@+id/inputLayout"
-                    app:layout_constraintTop_toBottomOf="@+id/inputLayout" />
+                    />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -76,9 +69,7 @@
                 android:layout_marginStart="20dip"
                 android:layout_marginTop="34dp"
                 android:layout_weight="1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputLayout2">
+                >
 
                 <EditText
                     android:id="@+id/etNuevoPrecio"
@@ -88,9 +79,8 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="@string/editText_precio"
-                    android:inputType="number"
-                    app:layout_constraintStart_toStartOf="@+id/inputLayout"
-                    app:layout_constraintTop_toBottomOf="@+id/inputLayout" />
+                    android:inputType="number|numberDecimal"
+                     />
             </android.support.design.widget.TextInputLayout>
 
             <Button
@@ -99,11 +89,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="60dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@android:color/white"
                 android:text="@string/btn_Anadir"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/scrollView4" />
+                 />
 
         </LinearLayout>
     </ScrollView>

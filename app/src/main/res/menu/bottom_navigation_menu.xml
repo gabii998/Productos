@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_pendientes"
+        android:icon="@drawable/baseline_schedule_white_48dp"
+        android:title="@string/bottom_item_pendientes" />
+    <item
+        android:id="@+id/nav_historial"
+        android:icon="@drawable/baseline_history_white_48dp"
+        android:title="@string/bottom_item_historial" />
+    <item
+        android:id="@+id/nav_configuracion"
+        android:icon="@drawable/baseline_settings_white_48dp"
+        android:title="@string/bottom_item_configuracion" />
+</menu>

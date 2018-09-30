@@ -3,10 +3,18 @@
     <string name="btn_Eliminar">Eliminar</string>
     <string name="btn_Modificar">Guardar</string>
     <string name="btn_Anadir">Añadir</string>
-    <string name="editText_id">Código del producto</string>
+    <string name="editText_cant">Cantidad</string>
     <string name="editText_nombre">Nombre</string>
     <string name="editText_precio">Precio</string>
     <string name="titulo_modificar">Modificar producto</string>
     <string name="titulo_cargar">Cargar producto</string>
-    <string name="mensaje_vacio">No hay productos cargados,por favor añada alguno</string>
+    <string name="mensaje_vacio">No hay productos cargados</string>
+    <string name="txt_historial_vacio">No hay historial disponible</string>
+    <string name="action_bar_item_nuevo">Nuevo</string>
+    <string name="bottom_item_pendientes">Pendientes</string>
+    <string name="bottom_item_historial">Historial</string>
+    <string name="bottom_item_configuracion">Configuración</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,43 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/scrollView4"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".Controlador.Anadir"
-        tools:layout_editor_absoluteY="10dp">
-
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controlador.Anadir"
+    tools:layout_editor_absoluteY="10dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/inputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="20dip"
-                android:layout_marginStart="20dip"
-                android:layout_marginTop="60dip"
-                >
-
-
-                <EditText
-
-                    android:id="@+id/etNuevoCodigo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="@string/editText_id"
-                    android:inputType="number"
-                    />
-            </android.support.design.widget.TextInputLayout>
-
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/inputLayout2"
                 android:layout_width="match_parent"
@@ -47,7 +19,7 @@
                 android:layout_marginTop="34dp"
                 >
 
-                <EditText
+                <android.support.design.widget.TextInputEditText
                     android:id="@+id/etNuevoNombre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -61,6 +33,28 @@
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dip"
+                android:layout_marginStart="20dip"
+                android:layout_marginTop="34dip"
+                >
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etNuevoCodigo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/editText_cant"
+                    android:inputType="number"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+            <android.support.design.widget.TextInputLayout
                 android:id="@+id/inputlayout3"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -71,7 +65,7 @@
                 android:layout_weight="1"
                 >
 
-                <EditText
+                <android.support.design.widget.TextInputEditText
                     android:id="@+id/etNuevoPrecio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

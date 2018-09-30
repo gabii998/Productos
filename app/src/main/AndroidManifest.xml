@@ -14,16 +14,15 @@
             android:label="@string/titulo_cargar" />
         <activity
             android:name=".Controlador.Modificar"
-            android:label="@string/titulo_modificar">
-
-        </activity>
+            android:label="@string/titulo_modificar"></activity>
         <activity android:name=".Controlador.Main">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity android:name=".Controlador.HistorialItemsActivity"></activity>
     </application>
 
 </manifest>

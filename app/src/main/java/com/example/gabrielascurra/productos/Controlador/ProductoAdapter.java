@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.gabrielascurra.productos.Modelo.Producto;
 import com.example.gabrielascurra.productos.R;
+import com.example.gabrielascurra.productos.modelo.Producto;
 
 import java.util.ArrayList;
 
@@ -53,7 +53,7 @@ public class ProductoAdapter extends BaseAdapter {
         TextView nombre=vista.findViewById(R.id.txtNombre);
         TextView precio=vista.findViewById(R.id.txtPrecio);
         //Se le setea cada atributo del objeto recuperado
-        codigo.setText("Codigo: "+String.valueOf(prod.getCodigoProducto()));
+        codigo.setText("Cantidad: "+String.valueOf(prod.getCantidad()));
         nombre.setText("Nombre: "+prod.getNombre());
         precio.setText("Precio: $"+String.valueOf(prod.getPrecio()) );
         return vista;

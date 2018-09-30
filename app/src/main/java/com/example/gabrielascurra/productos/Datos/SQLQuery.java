@@ -14,7 +14,9 @@ public class SQLQuery extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table "+nombre+"(prod_cod integer primary key,prod_nombre text,prod_precio real)");
+        db.execSQL("create table "+nombre+"(prod_nombre text NOT NULL,prod_cantidad integer,prod_precio real)");
+        db.execSQL("create table Historial(hist_fecha text NOT NULL,hist_cantidad integer,hist_productos text)");
+
     }
 
     @Override

@@ -3,11 +3,10 @@
 
     <data>
         <variable
-            name="producto"
-            type="com.example.gabrielascurra.productos.modelo.Producto" />
+            name="historial"
+            type="com.example.gabrielascurra.productos.modelo.Historico" />
     </data>
     <LinearLayout
-        android:id="@+id/itemView"
         android:layout_width="390dp"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -15,34 +14,26 @@
         android:background="?android:attr/selectableItemBackground">
 
         <TextView
-            android:id="@+id/txtNombre"
+            android:id="@+id/txtFechaHistorico"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margen_items_listview"
             android:layout_marginTop="@dimen/margen_items_listview"
             android:layout_marginEnd="@dimen/margen_items_listview"
             android:layout_weight="1"
-            android:text="@{producto.nombre}"
+            android:text="@{historial.dia}"
             android:textColor="@android:color/black"
             android:textSize="@dimen/tamano_item_primario_listview" />
 
         <TextView
-            android:id="@+id/txtCodigo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margen_items_listview"
-            android:layout_marginEnd="@dimen/margen_items_listview"
-            android:textSize="@dimen/tamano_item_secundario_listview"
-            android:text="@{`Cantidad: `+Integer.toString(producto.cantidad)}"/>
-
-        <TextView
-            android:id="@+id/txtPrecio"
+            android:id="@+id/txtCantidadHistorico"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margen_items_listview"
             android:layout_marginEnd="@dimen/margen_items_listview"
             android:layout_marginBottom="@dimen/margen_items_listview"
             android:textSize="@dimen/tamano_item_secundario_listview"
-            android:text="@{`Precio: $`+Float.toString(producto.precio)}"/>
+            android:text="@{`Productos en la lista: `+Integer.toString(historial.cantidadElementos)}"/>
+
     </LinearLayout>
 </layout>
